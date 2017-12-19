@@ -7,7 +7,7 @@ var Spotify = require(spotify)
 var Twitter = require(twitter);
 var keys = require(keys.js);
 
-var tweet = new new Twitter(keys);
+var tweet = new Twitter(keys);
 
 var argument = process.argv[2];
 var value = process.argv[3];
@@ -32,6 +32,10 @@ if(argument === "my-tweets"){
 	outputText();
 };
 
+module.exports = function(){
+	Twitter = Twitter
+};
+
 // OMDB if statement
 if(argument === "movie-this"){
 	console.log(process.argv);
@@ -47,6 +51,10 @@ if(argument === "movie-this"){
 	})
 	outputText();
 };
+
+module.exports = function(){
+	OMDB = OMDB
+}
 
 // Spotify if statement
 if(argument === "spotify-this-song"){
@@ -77,6 +85,10 @@ if(argument === "spotify-this-song"){
 	});
 	outputText();
 };
+
+module.exports = function(){
+	Spotify = Spotify
+}
 
 // Text file if statement
 if(argument === "do-what-it-says"){
