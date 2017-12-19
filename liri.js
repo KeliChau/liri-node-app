@@ -1,5 +1,6 @@
-//console.log("liri.js loaded");
+console.log("liri.js loaded");
 
+// Variables including require, request, fs
 var request = require(request);
 var fs = require(fs);
 var Spotify = require(spotify)
