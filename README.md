@@ -1,7 +1,7 @@
 # LIRI Bot Node App
 
 ## Project Overview
-LIRI Node App is a Language Interpretation and Recognition Interface app. LIRI will be a command line node app that takes in parameters and gives you back data using npm packages and APIs from Twitter, Spotify, and OMDB through request.
+LIRI Bot Node App is a Language Interpretation and Recognition Interface app. LIRI will be a command line node app that takes in parameters and gives you back data using npm packages and APIs from Twitter, Spotify, and OMDB through request.
 
 ### APIs 
 + Twitter 
