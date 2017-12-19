@@ -1,13 +1,13 @@
 console.log("liri.js loaded");
 
 // Variables including require, request, fs
-var request = require(request);
-var fs = require(fs);
-var Spotify = require(spotify)
-var Twitter = require(twitter);
-var keys = require(keys.js);
-
-var tweet = new Twitter(keys);
+var request = require("request");
+var fs = require("fs");
+var Spotify = require("node-spotify-api")
+var Twitter = require("twitter");
+var keys = require("./keys.js");
+console.log(keys);
+var tweet = new Twitter(keys.twitterKeys);
 
 var argument = process.argv[2];
 var value = process.argv[3];
@@ -21,7 +21,7 @@ var parameters = {
 
 // Twitter if statement
 if(argument === "my-tweets"){
-	twit.get('statuses/user_timeline', parameters, gotData);
+	tweet.get('statuses/user_timeline', parameters, gotData);
 	function gotData (error, data, response){
 		var tweets = data; // object
 		for (var i = 0; i < tweets.length; i++){
@@ -38,10 +38,10 @@ module.exports = function(){
 
 // OMDB if statement
 if(argument === "movie-this"){
-	console.log(process.argv);
+	console.log("movie this");
 	var movieTitle = process.argv[3];
-	request("http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&r=json&tomatoes=true", function(error, response, body){
-		if(process.argvp[3]){
+	request("http://www.omdbapi.com/?apikey=d3f8250e&t=" + movieTitle + "&y=&plot=short&r=json&tomatoes=true", function(error, response, body){
+		if(process.argv[3]){
 			console.log(body);
 		}else{
 			request("http://www.omdbapi.com/?t=mr+nobody+&y=&plot=short&r=json&tomatoes=true", function(error, response, body){

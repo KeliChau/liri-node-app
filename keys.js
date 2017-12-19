@@ -8,8 +8,8 @@ exports.twitterKeys = {
 var Spotify = require('node-spotify-api');
  
 var spotify = new Spotify({
-  id: <"458c24da06524cae9c7a21894babc9a0">,
-  secret: <"4e6dbc6c6ff14dcf900abbd6e16dd9bb">
+  id: "458c24da06524cae9c7a21894babc9a0",
+  secret: "4e6dbc6c6ff14dcf900abbd6e16dd9bb"
 });
  
 spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
