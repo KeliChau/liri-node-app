@@ -18,3 +18,8 @@ LIRI Bot Node App is a Language Interpretation and Recognition Interface app. LI
 
 #### node liri.js movie-this 'movie name here'
 + Outputs title of movie, year movie came out, IMDB rating, Rotten Tomatoes rating, country produced, language, plot, and actors of movie. + If there is no input of movie title, program will output default data for 'Mr. Nobody'.
+
+## Future Plans
++ Redefine Spotify as a constructor, add Spotify keys to liri.js file to test
++ Move requests/API calls inside of if statements 
++ Clean code and improve aesthetics
