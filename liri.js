@@ -6,7 +6,7 @@ var fs = require("fs");
 var Spotify = require("node-spotify-api")
 var Twitter = require("twitter");
 var keys = require("./keys.js");
-console.log(keys);
+
 var tweet = new Twitter(keys.twitterKeys);
 
 var argument = process.argv[2];
