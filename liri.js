@@ -1,4 +1,10 @@
-console.log("liri.js loaded");
+// Redefine spotify as a constructor. Copy Spotify keys over to liri.js file
+
+// Write requests/API calls inside if statements 
+
+// Clean up code, change aesthetics (add borders, etc)
+
+
 
 // Variables including require, request, fs
 var request = require("request");
@@ -40,15 +46,17 @@ module.exports = function(){
 if(argument === "movie-this"){
 	console.log("movie this");
 	var movieTitle = process.argv[3];
-	request("http://www.omdbapi.com/?apikey=d3f8250e&t=" + movieTitle + "&y=&plot=short&r=json&tomatoes=true", function(error, response, body){
 		if(process.argv[3]){
+			request("http://www.omdbapi.com/?apikey=d3f8250e&t=" + movieTitle + "&y=&plot=short&r=json&tomatoes=true", function(error, response, body)){
 			console.log(body);
-		}else{
+		}
+
+		else{
 			request("http://www.omdbapi.com/?t=mr+nobody+&y=&plot=short&r=json&tomatoes=true", function(error, response, body){
 				console.log(body);
-			})
+			}
 		}
-	})
+	}
 	outputText();
 };
 
